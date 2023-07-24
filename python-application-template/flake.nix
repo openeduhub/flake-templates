@@ -54,7 +54,6 @@
           WorkingDir = "/";
           Cmd = ["/bin/my-python-app"]; # modified in setup.py entry_points
         };
-        # copy the binaries and nltk_data of the application into the image
         copyToRoot = pkgs.buildEnv {
           name = "image-root";
           paths = [ python-app ];
