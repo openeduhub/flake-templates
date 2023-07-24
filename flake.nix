@@ -1,5 +1,5 @@
 {
-  description = "IT's JOINTLY Nix Flake Templates";
+  description = "Nix Flake Templates";
 
   outputs = { self, ... }: {
     templates = {
