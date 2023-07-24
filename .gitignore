@@ -1,2 +1,4 @@
 *~
 /.direnv/
+/python-application-template/flake.lock
+/python-package-template/flake.lock

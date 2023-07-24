@@ -32,11 +32,10 @@
       # the development installation contains all build packages,
       # plus some additional ones we do not need to include in production.
       python-packages-devel = py-pkgs:
-        (python-packages-build py-pkgs) ++
         with py-pkgs; [ipython
                        jupyter
                        black
-                      ];
+                      ] ++ (python-packages-build py-pkgs);
       python-devel = python.withPackages python-packages-devel;
 
       ### create the python package
@@ -61,7 +60,7 @@
           paths = [ python-app ];
           pathsToLink = [ "/bin" ];
         };
-      }
+      };
 
     in rec {
       # the packages that we can build
