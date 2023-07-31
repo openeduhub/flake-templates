@@ -42,11 +42,11 @@
         python-devel = python.withPackages python-packages-devel;
 
         ### create the python package
-        python-package = python-build.pkgs.buildPythonPackage {
+        python-package = python.pkgs.buildPythonPackage {
           pname = "my-python-package";
           version = "0.1.0";
           src = projectDir;
-          propagatedBuildInputs = [python-build];
+          propagatedBuildInputs = (python-packages-build python.pkgs);
         };
 
       in rec {

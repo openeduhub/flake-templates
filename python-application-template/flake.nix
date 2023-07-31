@@ -42,11 +42,11 @@
         python-devel = python.withPackages python-packages-devel;
 
         ### create the python package
-        python-app = python-build.pkgs.buildPythonApplication {
+        python-app = python.pkgs.buildPythonApplication {
           pname = "my-python-app";
           version = "0.1.0";
           src = projectDir;
-          propagatedBuildInputs = [python-build];
+          propagatedBuildInputs = (python-packages-build python.pkgs);
         };
         
         ### build the docker image
