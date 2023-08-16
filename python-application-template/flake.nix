@@ -39,6 +39,8 @@
           with py-pkgs; [ ipython
                           jupyter
                           black
+                          pyflakes
+                          isort
                         ]
           ++ (python-packages-build py-pkgs);
 
