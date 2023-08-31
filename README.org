@@ -1,0 +1,15 @@
+#+title: flake-templates
+#+EXPORT_EXCLUDE_TAGS: noexport
+
+Templates for Nix Flake projects, mostly involving Python applications and libraries.
+
+* Usage
+
+To initialize a new project with a template from this repository, run the following command inside of the directory of the new project:
+#+begin_src shell
+nix flake init --template github:openeduhub/flake-templates#<template>
+#+end_src
+
+The following templates are available:
+- =python-application= :: For Python projects that are intended to be use solely for their provided runnable applications.
+- =python-package= :: For Python projects that are intended to be as libraries in other Python projects, optionally also providing runnable applications.
