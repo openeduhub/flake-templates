@@ -32,8 +32,6 @@
           pylint
           pytest
           pytest-cov
-          # library stubs for mypy
-          pandas-stubs
         ]
         ++ (python-packages-build py-pkgs);
 
