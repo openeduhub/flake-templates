@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from setuptools import setup
+from setuptools import setup, find_packages
 
 setup(
     name="my-python-package",
@@ -7,7 +7,7 @@ setup(
     description="A Python package",
     author="",
     author_email="",
-    packages=[""],
+    packages=find_packages(),
     install_requires=[
         d for d in open("requirements.txt").readlines() if not d.startswith("--")
     ],
