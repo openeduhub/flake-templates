@@ -11,5 +11,7 @@ nix flake init --template github:openeduhub/flake-templates#<template>
 #+end_src
 
 The following templates are available:
-- =python-application= :: For Python projects that are intended to be use solely for their provided runnable applications.
+- =python-application= :: For Python projects that are intended to be use mostly for their provided runnable applications, whilst still being able to import them as a Python library.
 - =python-package= :: For Python projects that are intended to be as libraries in other Python projects, optionally also providing runnable applications.
+
+The primary difference between ~python-application~ and ~python-package~ is that the former also provides Nix code for generating Docker images from Nix.
